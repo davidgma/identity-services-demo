@@ -1,0 +1,2 @@
+#!/bin/bash
+ng build --output-path ./docs --base-href "https://davidgma.github.io/identity-services-demo/"

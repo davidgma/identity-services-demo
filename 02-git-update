@@ -1,0 +1,19 @@
+#!/bin/bash
+# The command to update git
+# The github pages site is automatically updated via the docs subdirectory
+# on building the Angular website.
+
+
+if [ $# -gt 0 ]; then
+	message=$*
+else
+	message="Upload changes."
+fi
+
+echo $message
+
+# Send master files to github
+git checkout master
+git add *
+git commit -a -m "${message}"
+git push origin master
